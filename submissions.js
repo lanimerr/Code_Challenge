@@ -50,9 +50,9 @@ const largestPair = function(array){
 
 
 const removeParenth = function (str) {
-    const indexOne = str.indexOf("(");
-    const indexTwo = str.indexOf(")");
-    return str.substring(0, indexOne) + str.substring(indexTwo + 1);
+    const stringOne = str.indexOf("(");
+    const stringTwo = str.indexOf(")");
+    return str.substring(0, stringOne) + str.substring(stringTwo + 1);
   };
     //console.log(removeParenth('ido(not)liketocode')); 
 
