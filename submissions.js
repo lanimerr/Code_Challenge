@@ -8,7 +8,9 @@ const findSum = function(array){
     }
     return sum
 };
-    //console.log(findSum([2, 4, 6]));
+ 
+//Problem 2
+
 
 
 
@@ -22,9 +24,6 @@ const isPalindrome = function(str){
     return(reverse  === lowerCase);
 
 };
-
-//console.log(isPalindrome('canal'));
-//console.log(isPalindrome('Ana'));
 
 
 
@@ -42,8 +41,6 @@ const largestPair = function(array){
     }
     return pair;
 };
-    //console.log(largestPair([5, 1, 2, 3, 1, 4]));
-    //console.log(largestPair([9, 5, 10, 2, 24, -1, -48]));
 
 
 //Problem 5
@@ -52,10 +49,10 @@ const largestPair = function(array){
 const removeParenth = function (str) {
     const stringOne = str.indexOf("(");
     const stringTwo = str.indexOf(")");
+    
     return str.substring(0, stringOne) + str.substring(stringTwo + 1);
   };
-    //console.log(removeParenth('ido(not)liketocode')); 
-
+     
 
 //Problem 6
 
@@ -120,7 +117,4 @@ const scoreScrabble = function(str){
 
     return num;
 };
-
-    //console.log(scoreScrabble('hello'));
-    //console.log(scoreScrabble('quiet'));
     
