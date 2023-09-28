@@ -9,7 +9,18 @@ const findSum = function(array) {
   
   
   const findFrequency = function(array) {
-    // your code here - don't forget to return an object!
+    const freq = { most: '', least: ''};
+        
+        const obj = {};
+        array.forEach(element =>{
+            if(!obj[element]) obj[element] = 1;
+            else obj[element] ++;
+
+        });
+        freq.most = Object.keys(obj)[0];
+        freq.least = Object.keys(obj)[Object.keys(obj).length -1];
+
+        return freq;
   };
 
   
