@@ -25,7 +25,7 @@ const findSum = function(array) {
             most = total;
             mostFreq = element;
         }
-        if (total <least){
+        if (total < least){
             least = total;
             leastFreq = element;
         }            
