@@ -8,22 +8,34 @@ const findSum = function(array) {
   };
   
   
-  const findFrequency = function(array) {
-    const freq = { most: '', least: ''};
-        
-        const obj = {};
-        array.forEach(element =>{
-            if(!obj[element]) obj[element] = 1;
-            else obj[element] ++;
+ const findFrequency = function(array) {
+    let most = 0; 
+    let least = array.length + 1; 
+    let mostFreq = "";
+    let leastFreq = "";
 
-        });
-        freq.most = Object.keys(obj)[0];
-        freq.least = Object.keys(obj)[Object.keys(obj).length -1];
+    const countElement = (element) =>{
+        let total = 0;
+        for (let i = 0; i < array.length; i ++){
+            if (array[i] == element){
+                total ++;
+            }
+        }
+        if (total > most){
+            most = total;
+            mostFreq = element;
+        }
+        if (total <least){
+            least = total;
+            leastFreq = element;
+        }            
+    };
+    array.forEach((element) => countElement(element));
+    const frequency = {most: mostFreq, least: leastFreq};
+    return frequency;
+};
 
-        return freq;
-  };
 
-  
   const isPalindrome = function(str) {
     let lowerCase = str.toLowerCase();
     let reverse = lowerCase.split('').reverse().join('');
